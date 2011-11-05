@@ -15,7 +15,8 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdftools.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdftools.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Requires:	texlive-oberdiek
 Requires:	texlive-pdftools.bin
 Requires:	texlive-pst-pdf
