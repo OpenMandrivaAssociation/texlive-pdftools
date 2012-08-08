@@ -1,12 +1,12 @@
-# revision 23089
+# revision 27321
 # category TLCore
 # catalog-ctan /support/xpdfopen
-# catalog-date 2011-05-31 15:00:33 +0200
+# catalog-date 2012-01-31 10:42:47 +0100
 # catalog-license pd
-# catalog-version 0.82
+# catalog-version 0.83
 Name:		texlive-pdftools
-Version:	0.82
-Release:	2
+Version:	0.83
+Release:	1
 Summary:	PDF-related utilities, including PostScript-to-PDF conversion
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/xpdfopen
@@ -17,9 +17,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Requires:	texlive-oberdiek
 Requires:	texlive-pdftools.bin
-Requires:	texlive-pst-pdf
 
 %description
 The command-line programs pdfopen and pdfclose allow you to
@@ -42,7 +40,7 @@ Popineau for Microsoft operating systems.
 %{_bindir}/e2pall
 %{_bindir}/pdfatfi
 %{_bindir}/ps4pdf
-%{_texmfdir}/scripts/tetex/e2pall.pl
+%{_texmfdistdir}/scripts/tetex/e2pall.pl
 %doc %{_mandir}/man1/e2pall.1*
 %doc %{_texmfdir}/doc/man/man1/e2pall.man1.pdf
 %doc %{_mandir}/man1/pdfclose.1*
@@ -61,11 +59,11 @@ Popineau for Microsoft operating systems.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdir}/scripts/tetex/e2pall.pl e2pall
+    ln -sf %{_texmfdistdir}/scripts/tetex/e2pall.pl e2pall
     ln -sf %{_texmfdistdir}/scripts/oberdiek/pdfatfi.pl pdfatfi
     ln -sf %{_texmfdistdir}/scripts/pst-pdf/ps4pdf ps4pdf
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
