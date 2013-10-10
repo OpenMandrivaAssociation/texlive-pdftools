@@ -1,12 +1,12 @@
-# revision 27321
+# revision 31660
 # category TLCore
 # catalog-ctan /support/xpdfopen
-# catalog-date 2012-01-31 10:42:47 +0100
+# catalog-date 2012-09-07 16:54:33 +0200
 # catalog-license pd
 # catalog-version 0.83
 Name:		texlive-pdftools
 Version:	0.83
-Release:	1
+Release:	2
 Summary:	PDF-related utilities, including PostScript-to-PDF conversion
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/xpdfopen
@@ -40,15 +40,15 @@ Popineau for Microsoft operating systems.
 %{_bindir}/e2pall
 %{_bindir}/pdfatfi
 %{_bindir}/ps4pdf
-%{_texmfdistdir}/scripts/tetex/e2pall.pl
+%{_texmfdistdir}/scripts/texlive/e2pall.pl
 %doc %{_mandir}/man1/e2pall.1*
-%doc %{_texmfdir}/doc/man/man1/e2pall.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/e2pall.man1.pdf
 %doc %{_mandir}/man1/pdfclose.1*
-%doc %{_texmfdir}/doc/man/man1/pdfclose.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/pdfclose.man1.pdf
 %doc %{_mandir}/man1/pdfopen.1*
-%doc %{_texmfdir}/doc/man/man1/pdfopen.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/pdfopen.man1.pdf
 %doc %{_mandir}/man1/pdftosrc.1*
-%doc %{_texmfdir}/doc/man/man1/pdftosrc.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/pdftosrc.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -64,23 +64,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/pst-pdf/ps4pdf ps4pdf
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.83-1
-+ Revision: 812742
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.82-2
-+ Revision: 754785
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.82-1
-+ Revision: 719227
-- texlive-pdftools
-- texlive-pdftools
-- texlive-pdftools
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
