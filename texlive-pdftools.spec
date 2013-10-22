@@ -6,7 +6,7 @@
 # catalog-version 0.83
 Name:		texlive-pdftools
 Version:	0.83
-Release:	2
+Release:	3
 Summary:	PDF-related utilities, including PostScript-to-PDF conversion
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/xpdfopen
@@ -59,7 +59,7 @@ Popineau for Microsoft operating systems.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/tetex/e2pall.pl e2pall
+    ln -sf %{_texmfdistdir}/scripts/texlive/e2pall.pl e2pall
     ln -sf %{_texmfdistdir}/scripts/oberdiek/pdfatfi.pl pdfatfi
     ln -sf %{_texmfdistdir}/scripts/pst-pdf/ps4pdf ps4pdf
 popd
