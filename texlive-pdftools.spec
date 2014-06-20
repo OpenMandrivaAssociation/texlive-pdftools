@@ -1,12 +1,12 @@
-# revision 31660
+# revision 34192
 # category TLCore
 # catalog-ctan /support/xpdfopen
-# catalog-date 2012-09-07 16:54:33 +0200
+# catalog-date 2014-05-17 07:55:44 +0200
 # catalog-license pd
-# catalog-version 0.83
+# catalog-version 0.84
 Name:		texlive-pdftools
-Version:	0.83
-Release:	8
+Version:	0.84
+Release:	1
 Summary:	PDF-related utilities, including PostScript-to-PDF conversion
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/xpdfopen
