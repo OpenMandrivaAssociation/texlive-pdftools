@@ -6,7 +6,7 @@
 # catalog-version 0.84
 Name:		texlive-pdftools
 Version:	0.84
-Release:	3
+Release:	4
 Summary:	PDF-related utilities, including PostScript-to-PDF conversion
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/xpdfopen
