@@ -9,7 +9,7 @@ Version:	0.84
 Release:	6
 Summary:	PDF-related utilities, including PostScript-to-PDF conversion
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/xpdfopen
+URL:		https://www.ctan.org/tex-archive/support/xpdfopen
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdftools.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdftools.doc.tar.xz
